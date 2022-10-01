@@ -69,16 +69,22 @@ public class UI {
 
     private static void printPiece(ChessPiece piece, boolean background){
         if (background){
-            System.out.print(ANSI_BLUE_BACKGROUND);
+            System.out.print(ANSI_PURPLE_BACKGROUND);
         }
         if (piece == null){
             System.out.print("-" + ANSI_RESET);
         } else {
-            if (piece.getColor() == Color.WHITE) {
+            if (piece.getColor() == Color.WHITE && !background) {
                 System.out.print(ANSI_WHITE_BACKGROUND + ANSI_BLACK +  piece + ANSI_RESET);
             }
-            else {
-                System.out.print(ANSI_BLACK_BACKGROUND + ANSI_YELLOW + piece + ANSI_RESET);
+            if (piece.getColor() == Color.WHITE && background) {
+                System.out.print(ANSI_PURPLE_BACKGROUND + ANSI_BLACK +  piece + ANSI_RESET);
+            }
+            if (piece.getColor() == Color.BLACK && background) {
+                System.out.print(ANSI_PURPLE_BACKGROUND + ANSI_YELLOW +  piece + ANSI_RESET);
+            }
+            if (piece.getColor() == Color.BLACK && !background) {
+                System.out.print(ANSI_BLACK_BACKGROUND + ANSI_YELLOW +  piece + ANSI_RESET);
             }
         }
         System.out.print(" ");
