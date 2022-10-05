@@ -7,7 +7,7 @@ This project was developed during a java course with only academic goals: apply 
 
 ## Requirements
 
-- A terminal that accepts ANSI escape code. Windows users may have a terminal emulator or IDE of choice. Examples: WSL, GNOME Terminal, Hyper Text, IntelliJ and VSCode.
+- A terminal that accepts ANSI escape code. Windows users may have a terminal emulator or IDE of choice. Examples: WSL, GNOME Terminal, Hyper, IntelliJ and VSCode.
 - Java Runtime Environment (JRE) v8 or higher, you can download it [here](https://www.java.com/pt-BR/download/).
 
 ## Building/Installation
