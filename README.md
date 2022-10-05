@@ -20,8 +20,10 @@ You can use javac to compile the main program in ```src/application/Program.java
 
 ## Running
 
-To start the game, you will need to run the ```Program.class```.
-Probably, it will be into ```out/prouction/ChessProject/application/Program.class```
+To start the game, you will need to run the file ```Program.class``` into a colorful terminal (that accepts ANSI CODE).<br>
+Examples of terminals I use in windows: WSL, Hyper, GNOME, or IDE Terminals such IntelliJ or Visual Code Studio.
+
+Probably, this file will be found in ```out/prouction/ChessProject/application/Program.class```
 
 Into ChessProject directory, you can run it with:<br>
 ```$ java application/Program```
