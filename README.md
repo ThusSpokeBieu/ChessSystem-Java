@@ -28,6 +28,8 @@ Probably, this file will be found in ```out/prouction/ChessProject/application/P
 Into ChessProject directory, you can run it with:<br>
 ```$ java application/Program```
 
+You can exit the application pressing Ctrl + C or exiting the terminal.
+
 ## Rules
 
 1. The board have columns (that are represented by letters between **'a'** and **'h'**) and rows (that are represented by numbers between **'1'** and **'8'**).
