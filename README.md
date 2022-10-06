@@ -57,3 +57,7 @@ You can exit the application pressing Ctrl + C or exiting the terminal.
 - The **BISHOP** may move any number of squares diagonally.
 - The only piece that can jump over a piece - be it your own, or the opponent's - is the: **KNIGHT**. The Knight can jump to any square in L shape.
 - The **PAWN** on its first move may move either one or two squares straight forward. After its first move the Pawn may only advance one square at a time. The Pawn captures by moving diagonally one square forward in each direction. The Pawn cannot move or capture backwards. 
+
+### Special Rules
+
+- **Castling:**  The King moves two squares in the direction of the Rook, the Rook jumps over the King and lands on the square next to it.

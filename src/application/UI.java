@@ -5,7 +5,6 @@ import chess.ChessPiece;
 import chess.ChessPosition;
 import chess.Color;
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -40,7 +39,7 @@ public class UI {
     }
     public static ChessPosition readChessPosition(Scanner sc){
         try {
-            String s = sc.nextLine();
+            String s = sc.nextLine().toLowerCase();
             char column = s.charAt(0);
             int row = Integer.parseInt(s.substring(1));
             return new ChessPosition(column, row);
