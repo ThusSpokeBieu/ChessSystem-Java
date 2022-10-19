@@ -15,10 +15,18 @@ This project was developed during a java course with only academic goals: apply 
 ## Building/Installation
 
 To run the game, clone the repository as follows: <br>
-``` $ git clone git@github.com:gmessiasc/ChessSystem-Java.git ```
+```bash
+ $ git clone git@github.com:gmessiasc/ChessSystem-Java.git
+```
 
 Then, you will need to compile it.
-You can use javac to compile the main program in ```src/application/Program.java```, or simply use your favourite IDE for it.
+
+You can use javac to compile the main program in: 
+```bash
+src/application/Program.java
+```
+
+or simply use your favourite IDE for it.
 
 ## Running
 
@@ -28,11 +36,13 @@ Examples of terminals I use in windows: WSL, Hyper, GNOME, or IDE Terminals such
 Probably, this file will be found in ```out/prouction/ChessProject/application/Program.class```
 
 Into ChessProject directory, you can run it with:<br>
-```$ java application/Program```
+```bash
+$ java application/Program
+```
 
 If everything is alright, it will open the console menu as the screenshot below:
 
-![](src/imgs/menu.png)
+![Menu screenshot](src/imgs/menu.png)
 
 Then input the respective number of options.<br>
 "1" and press enter for start the game Player vs Player.<br>
@@ -41,7 +51,7 @@ Then input the respective number of options.<br>
 
 If you choose "1" the match will start as the screenshot below:
 
-![](src/imgs/match.png)
+![Match screenshot](src/imgs/match.png)
 
 ## Rules
 
@@ -75,6 +85,7 @@ If you choose "1" the match will start as the screenshot below:
 
 - **Castling:**  The King moves two squares in the direction of the Rook, the Rook jumps over the King and lands on the square next to it.
 - **En passant:**  A pawn is able to capture a horizontally adjacent enemy pawn that has just advanced two squares in one move.
+- **Pawn promotion:** When a pawn reaches to its last rank, it transforms into a new piece of player's choose: a Queen, rook, bishop or knight of the pawn's color.
 
 ### License
 
