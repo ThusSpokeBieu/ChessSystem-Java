@@ -1,4 +1,6 @@
 # Chess System Project
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 This repository is a unpretentious program that allows the user play chess in terminal. 
 
@@ -28,7 +30,18 @@ Probably, this file will be found in ```out/prouction/ChessProject/application/P
 Into ChessProject directory, you can run it with:<br>
 ```$ java application/Program```
 
-You can exit the application pressing Ctrl + C or exiting the terminal.
+If everything is alright, it will open the console menu as the screenshot below:
+
+![](src/imgs/menu.png)
+
+Then input the respective number of options.<br>
+"1" and press enter for start the game Player vs Player.<br>
+"2" and press enter for start the game Player vs CPU (in development).<br>
+"3" and press enter for finish the program.
+
+If you choose "1" the match will start as the screenshot below:
+
+![](src/imgs/match.png)
 
 ## Rules
 
@@ -61,3 +74,8 @@ You can exit the application pressing Ctrl + C or exiting the terminal.
 ### Special Rules
 
 - **Castling:**  The King moves two squares in the direction of the Rook, the Rook jumps over the King and lands on the square next to it.
+- **En passant:**  A pawn is able to capture a horizontally adjacent enemy pawn that has just advanced two squares in one move.
+
+### License
+
+This project is licensed under the terms of the MIT license.

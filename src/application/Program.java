@@ -1,47 +1,59 @@
 package application;
 
 import chess.ChessException;
-import chess.ChessMatch;
-import chess.ChessPiece;
-import chess.ChessPosition;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.IOException;
 import java.util.Scanner;
 
-
 public class Program {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
-        ChessMatch chessMatch = new ChessMatch();
-        List<ChessPiece> captured = new ArrayList<>();
+        byte exit = 0;
+        int selection = 0;
 
-        while (!chessMatch.getCheckMate()) {
-            try {
-                UI.clearScreen();
-                UI.printMatch(chessMatch, captured);
-                System.out.println();
-                System.out.print("Source: ");
-                ChessPosition source = UI.readChessPosition(sc);
-
-                boolean[][] possibleMoves = chessMatch.possibleMoves(source);
-                UI.clearScreen();
-                UI.printBoard(chessMatch.getPieces(), possibleMoves);
-                System.out.println();
-                System.out.print("Target: ");
-                ChessPosition target = UI.readChessPosition(sc);
-
-                ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
-
-                if (capturedPiece != null){
-                    captured.add(capturedPiece);
-                }
-            } catch (ChessException e){
-                System.out.println(e.getMessage());
-                sc.nextLine();
-            }
+        while (exit == 0) {
             UI.clearScreen();
-            UI.printMatch(chessMatch, captured);
+            System.out.println();
+            System.out.print(UI.ANSI_PURPLE +
+                    "   ________                  \n" +
+                    "  / ____/ /_  ___  __________\n" +
+                    " / /   / __ \\/ _ \\/ ___/ ___/\n" +
+                    "/ /___/ / / /  __(__  |__  ) \n" +
+                    "\\____/_/ /_/\\___/____/____/\n" + UI.ANSI_YELLOW +
+                    "\t   _____            __               \n" +
+                    "\t  / ___/__  _______/ /____  ____ ___ \n" +
+                    "\t  \\__ \\/ / / / ___/ __/ _ \\/ __ `__ \\\n" +
+                    "\t ___/ / /_/ (__  ) /_/  __/ / / / / /\n" +
+                    "\t/____/\\__, /____/\\__/\\___/_/ /_/ /_/ \n" +
+                    "\t     /____/" + UI.ANSI_RESET);
+
+            System.out.println("\n\n\tWELCOME TO CHESS SYSTEM, choose one from:");
+            System.out.println();
+            System.out.println("\t1 - New Game: Player vs Player");
+            System.out.println("\t2 - New Game: Player vs CPU");
+            System.out.println("\t3 - Quit");
+
+            System.out.print("\n\tYour selected option is: ");
+            selection = sc.nextInt();
+            switch (selection) {
+                case 1:
+                    exit = 1;
+                    Runtime.getRuntime().exec(NewGamePVP.RunGame());
+                    break;
+                case 2:
+                    System.out.print("\tPlayer vs CPU is under development, please, select another option: ");
+                    selection = sc.nextInt();
+                    break;
+                case 3:
+                    System.out.println("\tSee ya!");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.print("\tPlease, select a valid option: ");
+                    selection = sc.nextInt();
+                    break;
+            }
         }
     }
 }
