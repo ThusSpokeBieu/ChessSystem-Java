@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f07906a9-cae5-466f-bb5b-9dfeff9dbeb0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/NewGamePVP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/NewGamePVP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/NewGamePVC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/NewGamePVP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/NewGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/UI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chess/ChessMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/ChessMatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imgs/menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/imgs/menu.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +72,8 @@
       <workItem from="1665171359113" duration="6956000" />
       <workItem from="1666111629183" duration="2757000" />
       <workItem from="1666125745065" duration="607000" />
-      <workItem from="1666213047855" duration="7068000" />
+      <workItem from="1666213047855" duration="7912000" />
+      <workItem from="1666244976187" duration="3232000" />
     </task>
     <servers />
   </component>

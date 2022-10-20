@@ -4,7 +4,9 @@
 
 This repository is a unpretentious program that allows the user play chess in terminal. 
 
-This project was developed during a java course with only academic goals: apply and improve the acquired knowledge, such as the java basics, object-oriented programming, and best practices.
+This project was developed during a java course of @DevSuperior with only academic goals: apply and improve the acquired knowledge, such as the java basics, object-oriented programming, and best practices.
+
+It was inspired by @acenelio [project](https://github.com/acenelio/chess-system-java).
 
 
 ## Requirements
@@ -44,11 +46,9 @@ If everything is alright, it will open the console menu as the screenshot below:
 
 ![Menu screenshot](src/imgs/menu.png)
 
-Then input the respective number of options.<br>
+Then input the respective number of options:<br>
 "1" and press enter for start the game Player vs Player.<br>
-"2" and press enter for start the game Player vs CPU (in development).<br>
-"3" and press enter for finish the program.
-
+"2" and press enter for finish the program.<br><br>
 If you choose "1" the match will start as the screenshot below:
 
 ![Match screenshot](src/imgs/match.png)

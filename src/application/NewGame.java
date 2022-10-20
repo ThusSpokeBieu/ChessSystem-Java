@@ -5,13 +5,12 @@ import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.ChessPosition;
 
-import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 
-public class NewGamePVP {
+public class NewGame {
     public static String[] RunGame() {
         Scanner sc = new Scanner(System.in);
         ChessMatch chessMatch = new ChessMatch();

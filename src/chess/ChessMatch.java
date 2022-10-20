@@ -76,19 +76,19 @@ public class ChessMatch {
      validateTargetPosition(source, target);
      Piece capturedPiece = makeMove(source, target);
 
-     if (testCheck(currentPlayer)){
+     if (testCheck(currentPlayer) || testIllegalCastling(source, target)){
          undoMove(source, target, capturedPiece);
          throw new ChessException("You can't put yourself in check");
      }
 
-     ChessPiece movedPiece = (ChessPiece)board.piece(target);
+     ChessPiece movedPiece = (ChessPiece) board.piece(target);
 
      promoted = null;
      if (movedPiece instanceof Pawn){
-         if((movedPiece.getColor() == Color.WHITE && target.getRow() == 0) || (movedPiece.getColor() == Color.BLACK && target.getRow() == 7)){
-             promoted = (ChessPiece)board.piece(target);
+         if ((movedPiece.getColor() == Color.WHITE && target.getRow() == 0)
+                 || (movedPiece.getColor() == Color.BLACK && target.getRow() == 7)) {
+             promoted = (ChessPiece) board.piece(target);
              promoted = replacePromotedPiece("Q");
-
          }
      }
 
@@ -109,6 +109,31 @@ public class ChessMatch {
      }
 
      return (ChessPiece)capturedPiece;
+    }
+
+    private boolean testIllegalCastling(Position source, Position target) {
+        ChessPiece movedPiece = (ChessPiece)board.piece(target);
+        boolean isIllegal = false;
+
+        // position in-between
+        Position inBetween = new Position(source.getRow(),
+                (source.getColumn()>target.getColumn()) ? source.getColumn() - 1 : target.getColumn() - 1);
+
+        // identifies if a king has moved
+        if (movedPiece instanceof King) {
+            // indentifies if a king has castled, once it moved two squares away
+            if (Math.abs(source.getColumn() - target.getColumn()) == 2) {
+                // checks if the position passed through by the king is attacked
+                Piece capturedPiece = makeMove(target, inBetween);
+
+                if (testCheck(currentPlayer)) {
+                    isIllegal = true;
+                }
+
+                undoMove(target, inBetween, capturedPiece);
+            }
+        }
+        return isIllegal;
     }
 
     public ChessPiece replacePromotedPiece(String type){
@@ -340,4 +365,5 @@ public class ChessMatch {
         placeNewPiece('g', 7, new Pawn(board, Color.BLACK, this));
         placeNewPiece('h', 7, new Pawn(board, Color.BLACK, this));
     }
+
 }

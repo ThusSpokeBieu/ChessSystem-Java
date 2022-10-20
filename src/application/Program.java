@@ -1,7 +1,5 @@
 package application;
 
-import chess.ChessException;
-
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -30,22 +28,17 @@ public class Program {
 
             System.out.println("\n\n\tWELCOME TO CHESS SYSTEM, choose one from:");
             System.out.println();
-            System.out.println("\t1 - New Game: Player vs Player");
-            System.out.println("\t2 - New Game: Player vs CPU");
-            System.out.println("\t3 - Quit");
+            System.out.println("\t1 - New Game");
+            System.out.println("\t2 - Quit");
 
             System.out.print("\n\tYour selected option is: ");
             selection = sc.nextInt();
             switch (selection) {
                 case 1:
                     exit = 1;
-                    Runtime.getRuntime().exec(NewGamePVP.RunGame());
+                    Runtime.getRuntime().exec(NewGame.RunGame());
                     break;
                 case 2:
-                    System.out.print("\tPlayer vs CPU is under development, please, select another option: ");
-                    selection = sc.nextInt();
-                    break;
-                case 3:
                     System.out.println("\tSee ya!");
                     System.exit(0);
                     break;
